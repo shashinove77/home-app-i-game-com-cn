@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 快速识别从这里开始</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 820px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* hero 开场模块 */
+        .hero {
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .hero em {
+            display: inline-block;
+            font-style: normal;
+            font-size: 1.1rem;
+            letter-spacing: 0.03em;
+            color: #5b6a7a;
+            background: #e7ebee;
+            padding: 0.2rem 1rem 0.2rem 0.9rem;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #d4dae0;
+        }
+
+        .hero h1 {
+            font-weight: 400;
+            font-size: 2.1rem;
+            letter-spacing: -0.01em;
+            color: #1a1f2c;
+            margin-bottom: 0.65rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.05rem;
+            color: #494f5a;
+            border-left: 3px solid #9aa9b9;
+            padding-left: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* 卡片通用样式 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eaedf0;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h2 {
+            font-weight: 500;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            color: #1e2533;
+            margin-bottom: 0.9rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e6eaef;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3c4250;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 —— 轻符号 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.6rem 0 0.2rem;
+        }
+
+        .feature-list li {
+            padding: 0.35rem 0 0.35rem 1.5rem;
+            position: relative;
+            color: #313844;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #78899e;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        /* 引用 / 提示摘要 */
+        .note-box {
+            background: #f0f3f7;
+            border-left: 3px solid #b5c2d0;
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #333b47;
+        }
+
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px dashed #dde2e9;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-item strong {
+            font-weight: 550;
+            color: #1f2635;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item span {
+            color: #48505e;
+            font-size: 0.95rem;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 1.2rem;
+            padding: 1.5rem 0 0.5rem;
+            border-top: 1px solid #dee4ea;
+            font-size: 0.98rem;
+            color: #4b5361;
+            text-align: left;
+        }
+
+        .closing a {
+            color: #2b3c54;
+            text-decoration: none;
+            border-bottom: 1px solid #b7c4d4;
+            transition: border-color 0.15s;
+        }
+
+        .closing a:hover {
+            border-bottom-color: #1f2a3a;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .card {
+                padding: 1.3rem 1.2rem;
+                border-radius: 14px;
+            }
+
+            .card h2 {
+                font-size: 1.1rem;
+            }
+
+            .note-box {
+                padding: 0.8rem 1rem;
+            }
+
+            .feature-list li {
+                padding-left: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场 -->
+    <div class="hero">
+        <em>轻触 · 即知</em>
+        <h1>这里就是 <a href="https://home-app-i-game.com.cn" style="color: #1a1f2c; text-decoration: none; border-bottom: 2px solid #c0ccdb;">爱游戏</a></h1>
+        <div class="tagline">一个不算大的想法：当你想快速弄明白一个网站到底在做什么，最好的方式就是读一遍它自己写的句子。</div>
+    </div>
+
+    <!-- 介绍区块 -->
+    <div class="card">
+        <h2>从一句简短的话说起</h2>
+        <p>你大概已经注意到，许多网页的首页会塞满动画、弹窗和复杂的导航。但有时候你只是想确认：这个网站是不是我需要的？它提供什么？值不值得花时间浏览？</p>
+        <p><a href="https://home-app-i-game.com.cn">爱游戏</a> 的页面设计倾向于保持一种低干扰的叙述：用平实的段落告诉你它关心什么，而不是用浮夸的标语让你一头雾水。你正在读的这段文字，其实就是它「自我介绍」的一部分。</p>
+    </div>
+
+    <!-- 特点卡片 -->
+    <div class="card">
+        <h2>几个你可以快速感受到的细节</h2>
+        <ul class="feature-list">
+            <li>内容结构偏向于直接陈述，很少绕弯子——你看到的段落就是它想表达的。</li>
+            <li>页面没有强行插入大量外部链接，注意力集中在自身描述上。</li>
+            <li>视觉上保持浅色与低对比，阅读时眼睛负担较小。</li>
+            <li>无论你是从手机还是电脑打开，版式都会自动适应，不会出现文字溢出或按钮错位。</li>
+        </ul>
+        <div class="note-box">
+            ⚬ 补充一点：即便你对游戏领域不熟悉，也不影响理解它的定位。页面写的每一个句子都在帮你建立印象。
+        </div>
+    </div>
+
+    <!-- 场景与提示（类似 FAQ 摘要变化） -->
+    <div class="card">
+        <h2>你可能遇到的小困惑 · 简单梳理</h2>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <strong>这是不是又一个需要注册才能看到内容的网站？</strong>
+                <span>从当前页面的调性看，它倾向于先展示信息，再考虑交互。你可以先通读内容再做判断。</span>
+            </div>
+            <div class="faq-item">
+                <strong>“爱游戏” 三个字具体指什么？</strong>
+                <span>它就是这个网站的名字。你可以把它理解为一个标识，就像一本书的标题。页面的所有叙述都在围绕这个名字展开。</span>
+            </div>
+            <div class="faq-item">
+                <strong>为什么首页看起来这么简洁？</strong>
+                <span>简洁不等于简陋。每个段落和留白都经过考虑，目的是让你更快抓到重点，而不是被装饰分散注意力。</span>
+            </div>
+        </div>
+        <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #4f5868;">如果你还有疑问，可以重新浏览一遍上面的段落——答案很可能已经写在某一行里了。</p>
+    </div>
+
+    <!-- 温和结尾，自然嵌入链接 -->
+    <div class="closing">
+        <p>读到这里，你应该已经对 <a href="https://home-app-i-game.com.cn">爱游戏</a> 有了自己的初步印象。一个网站最好的介绍方式，就是让人读完之后觉得：哦，原来是这样的。不需要太多修饰，也没有隐藏的套路。</p>
+        <p style="margin-top: 0.7rem;">如果你愿意，可以再花一分钟把页面从头扫一遍——那些看似平常的句子，往往才是真正定义它的东西。</p>
+    </div>
+
+</div>
+</body>
+</html>
