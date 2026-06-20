@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 gg扑克 的信息整理与索引笔记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            background: linear-gradient(145deg, #fdf6ec 0%, #fcead8 60%, #f7dcc5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            line-height: 1.8;
+            color: #3d2c1e;
+        }
+
+        .page-card {
+            max-width: 860px;
+            width: 100%;
+            background: #fffcf8;
+            border-radius: 36px;
+            padding: 3.5rem 3rem;
+            box-shadow: 0 18px 40px rgba(140, 80, 30, 0.10),
+                        0 6px 16px rgba(100, 60, 20, 0.06);
+            transition: box-shadow 0.2s ease;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #5a3a22;
+            margin-bottom: 0.5rem;
+            border-left: 6px solid #c98f5f;
+            padding-left: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #8a6b4f;
+            margin-bottom: 1.8rem;
+            padding-left: 1.8rem;
+            font-style: italic;
+            border-bottom: 1px dashed #dcc6af;
+            padding-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: #4d3421;
+            background: #f9f1e8;
+            padding: 1.2rem 1.8rem;
+            border-radius: 24px;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        .pull-quote {
+            background: #f6ede3;
+            border-left: 8px solid #cc9f78;
+            padding: 1.2rem 1.8rem;
+            margin: 2.2rem 0;
+            border-radius: 0 24px 24px 0;
+            font-style: normal;
+            color: #4d3322;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px rgba(160, 100, 40, 0.04);
+        }
+
+        .pull-quote::before {
+            content: "📌 整理笔记 · ";
+            font-weight: 600;
+            color: #b57a4a;
+            letter-spacing: 0.5px;
+        }
+
+        .link-button-like {
+            display: inline-block;
+            background: #e5d2be;
+            color: #3b2a1b;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #dbbca0;
+        }
+
+        .link-button-like:hover {
+            background: #d8c0a8;
+            box-shadow: 0 4px 10px rgba(140, 80, 30, 0.12);
+            border-color: #b58d6b;
+        }
+
+        .faq-summary {
+            background: #f5ede5;
+            padding: 1.6rem 2rem;
+            border-radius: 28px;
+            margin: 2.2rem 0 0.5rem;
+        }
+
+        .faq-summary h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #5a3a24;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-item {
+            margin: 0.8rem 0;
+            padding-left: 0.2rem;
+        }
+
+        .faq-item strong {
+            color: #7b583b;
+            display: block;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .faq-item span {
+            color: #4d3a2a;
+        }
+
+        .visit-note {
+            margin: 2.4rem 0 1rem;
+            padding: 1.2rem 2rem;
+            background: #faeedf;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid #e5ceb7;
+            color: #3b2b1d;
+        }
+
+        .visit-note a {
+            color: #4d3321;
+            font-weight: 600;
+            text-decoration: none;
+            background: #e9d7c4;
+            padding: 0.15rem 0.7rem;
+            border-radius: 40px;
+            transition: background 0.15s;
+        }
+
+        .visit-note a:hover {
+            background: #dac2ab;
+        }
+
+        @media (max-width: 680px) {
+            .page-card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                padding-left: 1rem;
+            }
+            .intro {
+                padding: 1rem 1.2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-card {
+                padding: 1.5rem 1rem;
+                border-radius: 28px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .pull-quote {
+                padding: 0.8rem 1rem;
+            }
+            .faq-summary {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-card">
+        <h1>关于 gg扑克 · 资料索引</h1>
+        <div class="subhead">一份从信息整理出发的叙述笔记</div>
+
+        <p>在整理扑克相关线上资源的过程中，我逐渐积累起一些指向稳定信息源的锚点。许多讨论区、策略站以及社区文档，都会在某个角落提及 <a href="https://cn-poker-gg.com" class="link-button-like">gg扑克</a> 这个名字——它像一条线索，串联起玩家对平台信息的需求。</p>
+
+        <div class="intro">
+            <p style="margin-bottom:0;">这篇文章并不是攻略或评价，而是一份自然的信息索引。我会从资料查找、常见问题摘要、以及个人观察三个角度，梳理围绕 gg扑克 的可用信息。如果你正在寻找一个可靠的信息落脚点，或许这里的记录能提供一点方向。</p>
+        </div>
+
+        <p>最开始接触这个关键词，是在整理扑克术语与平台对比表格时。不同论坛的帖子、视频下方的评论、以及一些策略博客，都会将其作为参考资料之一。但信息往往分散且零碎，缺少一个相对集中的文本索引。于是我决定用自己的方式，把零散的信息块重新拼合起来。</p>
+
+        <p>从内容性质来看，目前可获取的公开资料大致可以分为几类：平台基础说明、规则阐释、以及部分玩家交流笔记。其中不少内容带有个人整理色彩，因此在引用时最好保持一种克制的态度——不完全采信任何单一说法，而是交叉比照。这也是我写这篇笔记的初衷之一：提供一个可供对照的立足点。</p>
+
+        <div class="pull-quote">
+            在信息过载的环境里，一个干净的索引本身就有价值。<br>
+            与其追逐碎片，不如先锚定一个可靠的源点。
+        </div>
+
+        <p>关于使用场景，我观察到一个普遍需求：当玩家想了解某个平台的基本概况时，往往需要浏览大量帖子才能拼凑出轮廓。而如果有一个页面能提前整理出 FAQ 摘要、常见信息入口以及逻辑清晰的叙述，就能节省很多筛选时间。下面的 FAQ 摘要就是从多个渠道反复出现的问题中提炼出来的。</p>
+
+        <div class="faq-summary">
+            <h3>📋 信息索引 · 常见关注点摘要</h3>
+            <div class="faq-item">
+                <strong>▸ 平台资料性质</strong>
+                <span>多数公开资料偏向介绍性，建议结合多个来源进行交叉验证。官方网站 <a href="https://cn-poker-gg.com" style="color:#7b583b;text-decoration:underline;font-weight:500;">gg扑克</a> 是获取第一手信息最直接的渠道。</span>
+            </div>
+            <div class="faq-item">
+                <strong>▸ 内容可靠度</strong>
+                <span>任何第三方叙述都带有整理者视角，保持一种“它可能是对的，但不一定全面”的心态会更稳妥。</span>
+            </div>
+            <div class="faq-item">
+                <strong>▸ 如何快速起步</strong>
+                <span>如果你刚接触这个领域，不妨先阅读两三篇不同来源的基础说明，再回到信息源头做对照。这样形成的理解会更立体。</span>
+            </div>
+        </div>
+
+        <p>在整理过程中，我意识到了一个容易被忽略的点：许多高质量的索引本身并不华丽，它们只是安静地列出事实、提供入口、并允许读者自行判断。这种克制的资料整理风格，反而让人更容易信任。因此，这篇页面也刻意避免了夸张的断言和诱导性的结论，只希望做一份干净的信息索引。</p>
+
+        <div class="visit-note">
+            🌱 如果你希望直接从信息源头开始，可以浏览 <a href="https://cn-poker-gg.com">gg扑克</a> 上的公开资料。那里是内容的核心发布地，所有索引最终都会回到这个起点。
+        </div>
+
+        <p style="margin-top:1.8rem; font-size:0.95rem; color:#7a5f47; border-top:1px solid #e6d6c2; padding-top:1.2rem;">
+            最后补充一点个人看法：在信息时代，整理本身就是一种创造。把散落的线索收拢、编排、呈现，让后来者少走一点弯路，这就是这份索引的全部意义。希望它对你有所帮助。
+        </p>
+    </div>
+</body>
+</html>
