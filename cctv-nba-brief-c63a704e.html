@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA直播 – 赛事与平台介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f7fa;
+      line-height: 1.7;
+      color: #1e293b;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0c1821, #1b2a3a);
+      color: #e5e9f0;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      border-bottom: 4px solid #3b82f6;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .hero .subhead {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: #b0c4de;
+      line-height: 1.8;
+    }
+
+    /* 主体内容区 */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #0c1821;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #dbe1e8;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    /* 卡片/要点区 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.8rem;
+      margin: 1.8rem 0 2rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 1.6rem 1.3rem;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+      border: 1px solid #e9edf2;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    /* 内嵌列表 */
+    .scenario-list {
+      list-style: none;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .scenario-list li {
+      background: white;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.6rem;
+      border-radius: 12px;
+      border-left: 5px solid #3b82f6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      font-size: 0.95rem;
+    }
+
+    /* 提示框（FAQ 摘要风格） */
+    .faq-brief {
+      background: #f0f4fe;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    .faq-brief h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .faq-item {
+      margin-bottom: 0.9rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      color: #1e293b;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      color: #334155;
+      margin: 0;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: border-bottom 0.15s;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      border-bottom-color: #2563eb;
+    }
+
+    /* 可信说明小字 */
+    .note-meta {
+      background: #f1f4f8;
+      border-radius: 14px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #3f4a5c;
+      line-height: 1.6;
+    }
+
+    .note-meta strong {
+      color: #0f172a;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 2.5rem 1rem 2rem;
+      }
+
+      .container {
+        padding: 1.8rem 1rem 2rem;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+
+      .feature-grid {
+        gap: 1rem;
+      }
+
+      .faq-brief {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>关于 NBA 直播的一站式信息</h1>
+    <div class="subhead">
+      一个以赛事观看为线索的站点介绍，帮助你快速了解平台定位、内容特点与使用场景。<br>
+      没有夸张渲染，只有真实的功能说明与引导。
+    </div>
+  </header>
+
+  <!-- 正文区 -->
+  <main class="container">
+
+    <!-- 站点摘要 -->
+    <h2 class="section-title">平台简述</h2>
+    <p style="margin-bottom:1.2rem;">
+      <strong>NBA直播</strong> 是一个专注于篮球赛事信息聚合与播放引导的站点。它不生产比赛，而是为球迷提供一个相对集中的路径，去获取比赛时间、对阵信息以及可用的观看渠道。无论是常规赛还是季后赛，你都可以在这里找到清晰的时间表和相关的观看说明。
+    </p>
+    <p>
+      站点本身不托管任何视频流，所有指向外部平台的链接均经过筛选与归类，以尽量保证稳定与可用性。如果你正在寻找一个能帮你快速定位比赛、减少搜索成本的工具型页面，<a href="https://cctv-nba-sports.com">NBA直播</a> 可以作为一个日常参考入口。
+    </p>
+
+    <!-- 亮点卡片 -->
+    <h2 class="section-title">核心特点</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>⚡ 赛程速览</h3>
+        <p>每日更新即将开赛的对阵信息，无需在多个网站间切换，一个页面即可掌握今日焦点战。</p>
+      </div>
+      <div class="feature-card">
+        <h3>📺 多源指引</h3>
+        <p>针对同一场比赛提供多个可用的观看选项，在部分渠道失效时仍有备选方案。</p>
+      </div>
+      <div class="feature-card">
+        <h3>🧭 低干扰界面</h3>
+        <p>页面设计以信息呈现为优先，没有自动播放的视频或弹窗，浏览体验更安静。</p>
+      </div>
+      <div class="feature-card">
+        <h3>📱 响应式适配</h3>
+        <p>在手机与平板上同样可用，排版自动优化，适合通勤或碎片时间快速查看。</p>
+      </div>
+    </div>
+
+    <!-- 使用场景 / 建议 -->
+    <h2 class="section-title">适合怎样的使用习惯</h2>
+    <ul class="scenario-list">
+      <li>如果你习惯在赛前 10–20 分钟打开一个页面确认开球时间和可用平台，这个站点可以满足这种轻量需求。</li>
+      <li>当你的主力观看源意外卡顿或失效，站内所列的备用选项可能会帮你快速切换到其他可用链接。</li>
+      <li>如果你是赛季中期才开始关注某支球队，可以通过赛程列表快速回溯近期赛果及未来对阵。</li>
+      <li>对直播源稳定性要求较高的用户，建议同时收藏 1–2 个备用站，本平台可作为辅助对照使用。</li>
+    </ul>
+
+    <!-- FAQ 摘要 (不设问句，改用自然陈述) -->
+    <div class="faq-brief">
+      <h3>常见疑问摘要</h3>
+      <div class="faq-item">
+        <strong>平台是否需要注册或付费</strong>
+        <p>不需要。访问站点无需任何账号，站内列出的所有观看链接均为公开渠道，部分可能需要跳转到第三方平台，其收费或注册政策由相应平台自主决定。</p>
+      </div>
+      <div class="faq-item">
+        <strong>比赛时间是否准确</strong>
+        <p>赛程数据来源于公开信息，原则上与联盟官方保持一致。但受转播安排或临时变动影响，建议以赛前最新显示为准。</p>
+      </div>
+      <div class="faq-item">
+        <strong>为什么有时候链接无法打开</strong>
+        <p>直播链接受网络环境、地区限制或平台维护等因素影响，偶尔会出现不可用的情况。此时可尝试站内同一场比赛的其他选项，或稍后刷新重试。</p>
+      </div>
+    </div>
+
+    <!-- 可信说明 + 再次嵌入链接（自然融入句子） -->
+    <div class="note-meta">
+      <strong>关于本介绍页</strong><br>
+      本文档仅用于说明 <a href="https://cctv-nba-sports.com">NBA直播</a> 的页面功能与定位，不构成任何形式的观看承诺或服务质量担保。所有赛事信息均以实际播出为准，建议球迷在开赛前通过站内链接再次确认可用性。如果你希望直接体验，可直接将上方链接加入书签，作为日常观赛的辅助工具之一。<br><br>
+      本站与任何联赛、俱乐部或电视转播机构无直接隶属关系，所呈现的观看指引均基于公开信息整理，请用户自行判断与选择。
+    </div>
+
+  </main>
+
+  <!-- 极简 footer （仅视觉收尾，不添加多余链接） -->
+  <footer style="text-align:center; padding:1.8rem 1rem; color:#6b7280; font-size:0.85rem; border-top:1px solid #e2e8f0; background:#fafcff;">
+    · 信息参考页面 · 仅供个人使用 ·
+  </footer>
+
+</body>
+</html>
