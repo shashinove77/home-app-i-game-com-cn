@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA直播 · 简明观赛指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f5f2;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 36px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem 3rem;
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #eae7e2;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #9a8f84;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1e1c19;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #5d5852;
+            max-width: 580px;
+        }
+
+        .hero p strong {
+            color: #2c2b28;
+            font-weight: 550;
+        }
+
+        /* 背景说明 */
+        .note-box {
+            background: #f3f0eb;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .note-box h2 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            color: #2b2824;
+            margin-bottom: 0.5rem;
+        }
+
+        .note-box p {
+            color: #4d4944;
+            font-size: 0.95rem;
+        }
+
+        /* 三段式自然介绍 */
+        .intro-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .intro-card {
+            border-left: 3px solid #d6d0c8;
+            padding-left: 1.2rem;
+        }
+
+        .intro-card h3 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            color: #2b2824;
+            margin-bottom: 0.35rem;
+        }
+
+        .intro-card p {
+            font-size: 0.95rem;
+            color: #4d4944;
+        }
+
+        .intro-card p a {
+            color: #2c2b28;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b8afa4;
+            font-weight: 500;
+            transition: text-decoration-color 0.2s;
+        }
+
+        .intro-card p a:hover {
+            text-decoration-color: #2c2b28;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin-bottom: 2.5rem;
+            border-top: 1px solid #eae7e2;
+            padding-top: 1.8rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            color: #2b2824;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 0.9rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #2b2824;
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-item .a {
+            color: #4d4944;
+            font-size: 0.9rem;
+        }
+
+        /* 页尾提示 */
+        .footer-note {
+            border-top: 1px solid #eae7e2;
+            padding-top: 1.8rem;
+            text-align: center;
+        }
+
+        .footer-note p {
+            font-size: 0.9rem;
+            color: #6b655d;
+        }
+
+        .footer-note .link-sentence {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-note .link-sentence a {
+            color: #2c2b28;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #b8afa4;
+            font-weight: 500;
+            transition: text-decoration-color 0.2s;
+        }
+
+        .footer-note .link-sentence a:hover {
+            text-decoration-color: #2c2b28;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 520px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.2rem;
+                border-radius: 28px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .note-box {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .intro-card {
+                padding-left: 0.9rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .page {
+                padding: 1.2rem 1rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- hero 横幅 -->
+        <div class="hero">
+            <span class="hero-tag">· 观赛指南 ·</span>
+            <h1>NBA直播</h1>
+            <p>赛场瞬息万变，一个靠谱的直播入口能让看球体验完全不同。<br>这里是一份简明的 <strong>NBA直播</strong> 访问备忘，从设备到习惯，帮你省去反复寻找的麻烦。</p>
+        </div>
+
+        <!-- 背景说明 -->
+        <div class="note-box">
+            <h2>为什么需要一份指南？</h2>
+            <p>每个赛季都有近百场焦点战，转播源分散在不同平台，临时搜索往往浪费时间。这篇页面不是为了推荐某个特定渠道，而是从日常看球的角度，梳理几个常见的访问场景和注意事项——让你在打开直播时更从容。</p>
+        </div>
+
+        <!-- 三段自然介绍 -->
+        <div class="intro-grid">
+            <div class="intro-card">
+                <h3>▸ 从桌面到移动端</h3>
+                <p>无论你习惯坐在电脑前边看边刷数据，还是用手机在通勤路上瞄几眼，保持直播地址的易得性都很关键。很多朋友会把常用的 <a href="https://nba-cctv-sports.com">NBA直播</a> 站点加入浏览器书签或桌面快捷方式，这样赛前不用临时翻找，直接点开即可。另外注意网络环境，公共 Wi-Fi 下部分直播流可能受限，提前预留备用方案更稳妥。</p>
+            </div>
+            <div class="intro-card">
+                <h3>▸ 直播时段与回放</h3>
+                <p>NBA 比赛多集中在上午到中午（北京时间），但季后赛、周末场次时间常有变动。如果你关注的球队经常在凌晨开打，不妨养成赛前看一眼预告的习惯。错过直播也没关系，很多平台会保留回放——此时同样可以借助你收藏的 <a href="https://nba-cctv-sports.com">NBA直播</a> 页面查找录像入口，通常比在搜索引擎里翻来覆去更高效。</p>
+            </div>
+            <div class="intro-card">
+                <h3>▸ 画面质量与设备适配</h3>
+                <p>不同直播源的分辨率、缓冲速度差异不小。建议在非比赛高峰时段测试几个常用链接的流畅度，尤其是智能电视或平板设备，有些页面针对大屏做了优化，有些则需要手动切换画质。保持浏览器版本更新也能减少播放异常。把你觉得稳定的 <a href="https://nba-cctv-sports.com">NBA直播</a> 地址固定下来，每次观赛前花一分钟确认网络，比中途卡顿再折腾舒心得多。</p>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <h2>常见疑问速览</h2>
+            <div class="faq-item">
+                <span class="q">Q：直播需要注册或付费吗？</span>
+                <span class="a">大部分公开直播页面无需注册即可观看，部分高清或独家场次可能有官方付费要求。请以你访问时页面提示为准。</span>
+            </div>
+            <div class="faq-item">
+                <span class="q">Q：手机浏览器能直接播放吗？</span>
+                <span class="a">绝大多数直播源兼容主流手机浏览器。如遇到黑屏或提示需安装应用，可尝试切换桌面版网站或更换浏览器。</span>
+            </div>
+            <div class="faq-item">
+                <span class="q">Q：为什么有时候直播会卡顿？</span>
+                <span class="a">卡顿常与本地网络、直播源负载有关。可尝试降低画质、关闭后台下载，或稍等片刻重新加载。</span>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="footer-note">
+            <p>以上内容基于日常观赛经验整理，具体体验以实际页面为准。</p>
+            <div class="link-sentence">
+                想直接开始？收藏 <a href="https://nba-cctv-sports.com">NBA直播</a> 页面，赛前随时打开。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
